@@ -1,61 +1,46 @@
 
-<div class="container-fluid bg">
-	<div class="row">
-		<div class="col-md-12 col-sm-12 col-xs-12">
-			<a href="<?php base_url()?>" class="logo">AndrePelealu</a>
-		</div>
-	</div>
-
 
 
 	<div class="row">
-		<div class="col-xs-12">
 
-
-			</div>
-		<div class="col-md-12 col-sm-12  col-xs-12">
+		<div class="col-md-12 col-xs-12">
 			<center>
-			<h1 class="">Hai !</h1>
-			<h3 class="putih">Welcome to my website </h3>
-			<p class="putih">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<br>
-</center>
+				<h1 class="">Hai !</h1>
+				<h3 class="putih">Welcome to my website </h3>
+				<p class="putih">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<br>
+		</center>
 		</div>
-		<div class=" col-xs-12">
 
-
-		</div>
 	</div>
 
 		<div class="row">
-			<div class="col-md-4 col-sm-12 col-xs-12">
+			<div class="col-md-4">
 				<a href="profile" class="btn btn-info btn-lg btn-block">See My Profile</a>
 			</div>
-			<div class="col-md-4 col-sm-12 col-xs-12">
+			<div class="col-md-4">
 				<a href="#" class="btn btn-warning btn-lg btn-block">Go to My Post</a>
 			</div>
-			<div class="col-md-4 col-sm-12 col-xs-12">
+			<div class="col-md-4">
 				<button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal">Send me message</button>
 
 			</div>
 		</div>
 
 
-	<<br>
+	<br>
 
 	<div class="row">
-
-		<div class=" col-md-4  col-xs-12"><br>
-
+		<div class=""><br>
 		</div>
 
-		<div class="col-md-4  col-sm-12 col-xs-12">
+		<div class="col-md-12">
 			<a href="#" class="btn btn-danger btn-lg btn-block ">Clik Here to See Magic</a>
 			<!-- <p id="target"></p> -->
 		</div>
 
-		<div class=" col-md-4  col-xs-12">
-			<img src="https://media.giphy.com/media/xThtaaGyhb0kZ052A8/giphy.gif" alt="">
+		<div class="">
+			<img class="img-responsive" src="https://media.giphy.com/media/xThtaaGyhb0kZ052A8/giphy.gif" alt="">
 		</div>
 
 	</div>
@@ -64,14 +49,14 @@
 
 
 </div>
-
+</div>
 
 
 
 
 		<!-- Modal content-->
 		<div class="row">
-			<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="">
 				<div id="myModal" class="modal fade" role="dialog">
 					<div class="modal-dialog">
 

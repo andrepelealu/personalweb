@@ -153,8 +153,9 @@ p{
 .bg{
   color: white;
   background-image: url("https://edecorati.com/data/out/119/flat-wallpapers_291987840.jpg");
-  padding-bottom: 27%;
-  
+  background-size: 100%;
+
+
 
 }
 .logo{
