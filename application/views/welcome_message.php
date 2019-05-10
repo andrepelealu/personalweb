@@ -1,5 +1,8 @@
+<body>
+<div class="container-fluid bg">
+<div class="container">
+		<a href="<?php base_url()?>" class="logo">AndrePelealu</a>
 	<div class="row">
-
 		<div class="col-md-12 col-xs-12">
 			<center>
 				<h1 class="">Hai !</h1>
@@ -12,16 +15,19 @@
 	</div>
 
 		<div class="row">
+
 			<div class="col-md-4">
 				<a href="profile" class="btn btn-info btn-lg btn-block">See My Profile</a>
 			</div>
+
 			<div class="col-md-4">
-				<a href="#" class="btn btn-warning btn-lg btn-block">Go to My Post</a>
+				<a href="blog" class="btn btn-warning btn-lg btn-block">Go to My Post</a>
 			</div>
+
 			<div class="col-md-4">
 				<button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal">Send me message</button>
-
 			</div>
+
 		</div>
 
 
@@ -39,14 +45,12 @@
 		<div class="">
 			<img class="img-responsive" src="https://media.giphy.com/media/xThtaaGyhb0kZ052A8/giphy.gif" alt="">
 		</div>
-
 	</div>
 
 
 
 
-</div>
-</div>
+
 
 
 
@@ -63,7 +67,7 @@
 								<h4 class="modal-title">Send me some text !</h4>
 							</div>
 							<div class="modal-body">
-								<form class="" action="welcome/send" method="post">
+								<form class="" action="pesan" method="post">
 									<div class="form-group">
 										<label for="">Name</label>
 										<input type="text" class="form-control" name="nama" value="" required>
@@ -84,6 +88,8 @@
 
 
 	</div>
+</div>
+</div>
 </div>
 <!-- The Modal -->
 

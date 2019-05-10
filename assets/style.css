@@ -5,6 +5,7 @@ body {
  font-weight:400;
  font-size:15px
 }
+
 ul {
  padding:0;
  margin:0
@@ -190,4 +191,16 @@ p{
         }
 .sec2{
   background-image: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-506368.jpg");
+}
+/* BLOG */
+.post{
+  text-align: center;
+  border: ridge;
+  padding: 5px;
+  margin: 10px;
+  background-color: ;
+
+}
+.center{
+  text-align: center;
 }

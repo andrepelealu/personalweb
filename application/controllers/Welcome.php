@@ -18,6 +18,8 @@ class Welcome extends CI_Controller {
 		{
 			$nama = $this->input->post('nama');
 			$pesan = $this->input->post('isi');
+			// $nama = $this->db->escape($nama);
+			// $pesan = $this->db->escape($pesan);
 			$data = array(
 				'nama' => $nama,
 				'pesan'=> $pesan
@@ -26,11 +28,10 @@ class Welcome extends CI_Controller {
 			$simpan = $this->homepage_model->simpan('komen',$data);
 			if($simpan){
 				echo "<script type='text/javascript'>alert('Berhasil');</script>";
-				$komen = true;
-				redirect('/',$komen);
+				redirect('/');
 			}else{
-				var_dump($simpan);
-				echo 'gagal';
+				echo "<script type='text/javascript'>alert('Gagal');</script>";
+				redirect('/');
 			}
 		}else{
 			redirect('/');

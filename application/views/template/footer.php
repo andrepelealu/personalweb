@@ -1,6 +1,5 @@
 
-<div class="row">
-  <div class="col-md-12 col-sm-12 col-xs-12">
+
     <footer class="footer-area footer--light">
 
       <div class="mini-footer">
@@ -21,8 +20,7 @@
         </div>
       </div>
     </footer>
-  </div>
-</div>
+
 
 	</body>
 </html>
