@@ -6,7 +6,7 @@ class Profile extends CI_Controller {
 	{
 
 		$this->load->view('template/header');
-		$this->load->view('welcome_message');
+		$this->load->view('profile');
 		$this->load->view('template/footer');
 	}
 }

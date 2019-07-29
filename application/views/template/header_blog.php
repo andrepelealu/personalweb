@@ -21,15 +21,15 @@
 <body>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <!-- BRAND -->
-    <a href="/" class="navbar-brand">AndrePelealu</a>
+    <a href="<?php echo base_url() ?>" class="navbar-brand">AndrePelealu</a>
     <!-- END BRAND -->
 
     <!-- toogle-->
-    <button type="button" name="button" class="navbar-toggler" data-toggle="collapse" data-target="#target">
+    <!-- <button type="button" name="button" class="navbar-toggler" data-toggle="collapse" data-target="#target">
       <span class="navbar-toggler-icon"></span>
-    </button>
+    </button> -->
     <!-- end toggle-->
-    <div class="collapse navbar-collapse" id="#target">
+    <!-- <div class="collapse navbar-collapse" id="#target">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a href="#">Menu 1</a>
@@ -46,5 +46,5 @@
         <li class="nav-item">
           <a href="#">Menu 1</a>
         </li>
-      </ul>
+      </ul> -->
   </nav>

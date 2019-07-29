@@ -24,7 +24,7 @@ class Welcome extends CI_Controller {
 				'nama' => $nama,
 				'pesan'=> $pesan
 			);
-			var_dump($data);
+			// var_dump($data);
 			$simpan = $this->homepage_model->simpan('komen',$data);
 			if($simpan){
 				echo "<script type='text/javascript'>alert('Berhasil');</script>";
