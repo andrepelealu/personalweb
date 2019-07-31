@@ -27,8 +27,20 @@ class Welcome extends CI_Controller {
 			// var_dump($data);
 			$simpan = $this->hp_model->simpan('komen',$data);
 			if($simpan){
-				echo "<script type='text/javascript'>alert('Berhasil');</script>";
-				redirect('/');
+				ini_set( 'display_errors', 1 );
+		    error_reporting( E_ALL );
+		    $from = "kontak-andrepelealu@andrepelealu.com";
+		    $to = "andre02.9d@gmail.com";
+		    $subject = "[AndrePelealu.com]Ada Pesan baru dari website";
+		    $message = "Nama Pengirim :".$nama."| Pesan: ".$pesan;
+		    $headers = "From:" . $from;
+		    $kirim = mail($to,$subject,$message, $headers);
+		    echo "<script type='text/javascript'>alert('Pesan Berhasil Dikirim');</script>";
+				if($kirim)
+				{
+					redirect(base_url());
+				}
+
 			}else{
 				echo "<script type='text/javascript'>alert('Gagal');</script>";
 				redirect('/');
