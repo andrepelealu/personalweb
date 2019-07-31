@@ -5,7 +5,7 @@ class Blog extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('blog_m');
-		$this->load->model('homepage_model');
+		$this->load->model('hp_model');
 	}
 	public function index()
 	{
@@ -31,12 +31,14 @@ class Blog extends CI_Controller {
 			$judul		= $this->input->post('judul');
 			$post 		= $this->input->post('isi');
 			$slug			= str_replace(" ", "-",$judul);
+			$slug			= str_replace("#", "",$judul);
+
 			$post 		= array(
 				'judul' => $judul,
 				'post'	=> $post,
 				'slug'	=> $slug
 			);
-			$simpan		= $this->homepage_model->simpan('blog',$post);
+			$simpan		= $this->hp_model->simpan('blog',$post);
 			if ($simpan) {
 				echo "<script type='text/javascript'>alert('Berhasil');</script>";
 				redirect('/blog/createpost');

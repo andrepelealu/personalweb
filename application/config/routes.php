@@ -5,3 +5,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['pesan']='welcome/send';
 $route['tampil/(:any)']='blog/tampil/$1';
+$route['notfound']='page404';

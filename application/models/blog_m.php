@@ -1,6 +1,6 @@
 <?php
 
-class blog_m EXTENDS CI_Model{
+class Blog_m EXTENDS CI_Model{
 
   public function get_post($data){
     $this->db->order_by("id", "DESC");

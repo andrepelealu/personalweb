@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Welcome extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
-		$this->load->model('homepage_model');
+		$this->load->model('hp_model');
 	}
 	public function index()
 	{
@@ -25,7 +25,7 @@ class Welcome extends CI_Controller {
 				'pesan'=> $pesan
 			);
 			// var_dump($data);
-			$simpan = $this->homepage_model->simpan('komen',$data);
+			$simpan = $this->hp_model->simpan('komen',$data);
 			if($simpan){
 				echo "<script type='text/javascript'>alert('Berhasil');</script>";
 				redirect('/');
