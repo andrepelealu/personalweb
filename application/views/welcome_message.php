@@ -45,7 +45,7 @@
 			<div class="col-md-6">
 				<br><br><br><br>
 
-				<i><p class="putih"><?php echo $header->teks_header ?></p></i>
+				<i><p class="putih">"<?php echo $header->teks_header ?>"</p></i>
 			</div>
 		</div>
 		<!-- Modal content-->
@@ -93,55 +93,72 @@
 	<!-- The Modal -->
 	<!-- Perkenalan -->
 	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-xs-12">
-				<center>
+		<section id="profile">
+			<div class="row">
+				<div class="col-md-6 col-xs-12">
+					<center>
+						<br><br>
+					<img src="<?php echo base_url('assets/img/profile.png')?>" alt="">
+					<center>
+				</div>
+				<div class="col-md-6 col-xs-12">
 					<br><br>
-				<img src="<?php echo base_url('assets/img/profile.png')?>" alt="">
-				<center>
+					<div class="center" >
+						<h5><?php echo $header->sec_title ?></h5>
+						<h2><?php echo $header->title_perkenalan ?></h2>
+						<p>	<?php echo $header->content_perkenalan ?></p>
+					</div>
+				</div>
+				<!-- END Perkenalan -->
+				<!-- Quotes -->
 			</div>
-			<div class="col-md-6 col-xs-12">
-				<br><br>
-				<div class="center" id="profile">
-					<h5><?php echo $header->sec_title ?></h5>
-					<h2><?php echo $header->title_perkenalan ?></h2>
-					<p>	<?php echo $header->content_perkenalan ?></p>
+			<div class="row">
+				<div class="col-md-6 col-xs-12">
+					<div class="jumbotron">
+						<p><i>"<?php echo $header->content_quotes ?>"</i></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-xs-12">
+					<div class="center">
+						<img src="<?php echo base_url('assets/img/pict2.png')?>" alt="">
+					</div>
 				</div>
 			</div>
-			<!-- END Perkenalan -->
-			<!-- Quotes -->
-		</div>
-		<div class="row">
-			<div class="col-md-6 col-xs-12">
-				<div class="jumbotron">
-					<p><i>"<?php echo $header->content_quotes ?>"</i></p>
-				</div>
-			</div>
-			<div class="col-md-6 col-xs-12">
-				<div class="center">
-					<img src="<?php echo base_url('assets/img/pict2.png')?>" alt="">
-				</div>
-			</div>
-		</div>
-		<!-- END Quotes -->
+			<!-- END Quotes -->
+		</section>
+
 		<!-- Gallery -->
-		<div class="col-md-12 col-xs-12">
-			<div class="center">
-				<h1>Foto</h1>
+		<section id="organisasi">
+			<div class="col-md-12 col-xs-12" >
+				<div class="center">
+					<h4>Pengalaman Organisasi</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+						 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+						 ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+						 voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+						 cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-4 col-xs-12">
-				<h1>1</h1>
+			<div class="row">
+				<div class="col-md-4 col-xs-12">
+					<center><img src="<?php echo base_url('assets/img/osis.jpg')?>" style="width:340px;height:245px;" alt=""></center>
+					<p class="center">OSIS SMA N 6 <br>Semarang</p>
+				</div>
+				<div class="col-md-4 col-xs-12">
+					<center><img src="<?php echo base_url('assets/img/pecintaalam.jpg')?>" style="width:340px;height:245px;"alt=""></center>
+					<p class="center">Pecinta Alam SMA N 6 <br>Semarang</p>
+
+				</div>
+				<div class="col-md-4 col-xs-12">
+					<center><img src="<?php echo base_url('assets/img/bem.jpg')?>" style="width:340px;height:245px;" alt=""></center>
+					<p class="center">BEM-KM Universitas Dian Nuswantoro Semarang</p>
+
+				</div>
 			</div>
-			<div class="col-md-4 col-xs-12">
-				<h1>2</h1>
-			</div>
-			<div class="col-md-4 col-xs-12">
-				<h1>3</h1>
-			</div>
-		</div>
-		<!-- END Gallery -->
+			<!-- END Gallery -->
+		</section>
+
 	</div>
 
 	<script type="text/javascript">

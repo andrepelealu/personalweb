@@ -1,12 +1,13 @@
 <?php
 
 
-class homepage_model EXTENDS CI_Model
+class Homepage_model EXTENDS CI_Model
 {
-  
+
    function ambil(){
 
-     return $this->db->get('homepage');
+     $query=$this->db->get('homepage');
+     return $query->row();
   }
   public function simpan_komen($data){
 

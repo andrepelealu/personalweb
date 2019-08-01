@@ -4,47 +4,39 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="<?php echo base_url()?>assets/style.css">
+		<link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.min.css")?>">
+		<link rel="stylesheet" href="<?php echo base_url("assets/js/jquery.js")?>">
+		<link rel="stylesheet" href="<?php echo base_url("assets/js/bootstrap.min.js")?>">
+
+		<link rel="stylesheet" href="<?php echo base_url("assets/css/style.css")?>">
+		<link rel="stylesheet" href="<?php echo base_url("assets/css/scrolling-nav.css")?>">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins|Ubuntu" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
     <!-- END FONT -->
-		<title>Blog - AndrePelealu</title>
+		<title>Andre Aditya Pelealu</title>
 	</head>
-<body>
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <!-- BRAND -->
-    <a href="<?php echo base_url() ?>" class="navbar-brand">AndrePelealu</a>
-    <!-- END BRAND -->
-
-    <!-- toogle-->
-    <!-- <button type="button" name="button" class="navbar-toggler" data-toggle="collapse" data-target="#target">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
-    <!-- end toggle-->
-    <!-- <div class="collapse navbar-collapse" id="#target">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a href="#">Menu 1</a>
-        </li>
-      </ul>
-
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a href="#">Menu 1</a>
-        </li>
-      </ul>
-
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a href="#">Menu 1</a>
-        </li>
-      </ul> -->
-  </nav>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top col-md-12 col-xs-12" id="mainNav">
+	<div class="container">
+		<a class="navbar-brand js-scroll-trigger logo" href="<?php echo base_url()?>">AndrePelealu</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>">Home</a>
+				</li>
+				<!-- <li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#organisasi">Pengalaman Organisasi</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#contact" data-toggle="modal" data-target="#myModal">Kontak</a>
+				</li> -->
+			</ul>
+		</div>
+	</div>
+	</nav>

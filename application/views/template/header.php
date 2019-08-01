@@ -28,13 +28,16 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#about">Tentang Saya</a>
+					<a class="nav-link js-scroll-trigger" href="#profile">Tentang Saya</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#services">Pengalaman Organisasi</a>
+					<a class="nav-link js-scroll-trigger" href="#organisasi">Pengalaman Organisasi</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link js-scroll-trigger" href="#contact" data-toggle="modal" data-target="#myModal">Kontak</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="<?php echo base_url('blog') ?>" >Blog</a>
 				</li>
 			</ul>
 		</div>
