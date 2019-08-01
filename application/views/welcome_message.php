@@ -2,17 +2,20 @@
 <header class="bg">
 	<div class="container-fluid ">
 		<div class="row">
-			<div class="col-md-12 col-xs-12">
-				<center>
-					<h1 class=""><?php echo $header->header ?></h1>
-					<h3 class="putih">
-						<?php echo $header->sub_header ?>
+			<div class="container">
+				<div class="col-md-12 col-xs-12">
+					<center>
+						<h1 class=""><?php echo $header->title_header ?></h1>
+						<h3 class="putih">
+							<?php echo $header->subtitle_header ?>
 
-					</h3>
-					<p class="putih" id=""><?php echo $header->desc_header ?></p>
-					<br>
-				</center>
+						</h3>
+						<p class="putih" id=""><?php echo $header->desc_header ?></p>
+						<br>
+					</center>
+				</div>
 			</div>
+
 
 		</div>
 
@@ -23,7 +26,7 @@
 			</div>
 
 			<div class="col-md-4">
-				<a href="blog" class="btn btn-warning btn-lg btn-block">Blog Post</a>
+				<a href="blog" class="btn btn-warning btn-lg btn-block putih">Blog Post</a>
 			</div>
 
 			<div class="col-md-4">
@@ -40,8 +43,9 @@
 
 			</div>
 			<div class="col-md-6">
-				<br>
-				<i><p><?php echo $header->content_quotes ?></p></i>
+				<br><br><br><br>
+
+				<i><p class="putih"><?php echo $header->teks_header ?></p></i>
 			</div>
 		</div>
 		<!-- Modal content-->

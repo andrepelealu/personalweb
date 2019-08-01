@@ -19,7 +19,7 @@
 		<title>Andre Aditya Pelealu</title>
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top col-md-12 col-xs-12" id="mainNav">
 	<div class="container">
 		<a class="navbar-brand js-scroll-trigger logo" href="<?php echo base_url()?>">AndrePelealu</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
