@@ -1,7 +1,6 @@
-<body>
-	<div class="container-fluid bg">
 
-		<a href="<?php echo base_url()?>" class="logo">AndrePelealu</a>
+<header class="bg">
+	<div class="container-fluid ">
 		<div class="row">
 			<div class="col-md-12 col-xs-12">
 				<center>
@@ -36,10 +35,13 @@
 		<br>
 
 		<div class="row">
-			<div class=""><br>
+			<div class="col-md-6">
+				<img class="img-responsive" src="https://i.giphy.com/media/xThtaaGyhb0kZ052A8/giphy.webp" alt="">
+
 			</div>
-			<div class="">
-				<img class="img-responsive" src="https://media.giphy.com/media/xThtaaGyhb0kZ052A8/giphy.gif" alt="">
+			<div class="col-md-6">
+				<br>
+				<i><p><?php echo $header->content_quotes ?></p></i>
 			</div>
 		</div>
 		<!-- Modal content-->
@@ -50,8 +52,9 @@
 
 						<div class="modal-content">
 							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
 								<h4 class="modal-title">Kirim Pesan Sekarang</h4>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+
 							</div>
 							<div class="modal-body">
 								<form class="" action="pesan" method="post">
@@ -66,7 +69,7 @@
 
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
 							</div>
 						</div>
 
@@ -80,6 +83,8 @@
 		<!-- MODAL CONFIRM -->
 
 	</div>
+</header>
+
 
 	<!-- The Modal -->
 	<!-- Perkenalan -->
@@ -88,7 +93,7 @@
 			<div class="col-md-6 col-xs-12">
 				<center>
 					<br><br>
-				<img src="https://i.ibb.co/h2Y8z7f/1564635301016.png" alt="">
+				<img src="<?php echo base_url('assets/img/profile.png')?>" alt="">
 				<center>
 			</div>
 			<div class="col-md-6 col-xs-12">
@@ -110,7 +115,7 @@
 			</div>
 			<div class="col-md-6 col-xs-12">
 				<div class="center">
-					<img src="https://i.ibb.co/wW2mfth/1564636218021.png" alt="">
+					<img src="<?php echo base_url('assets/img/pict2.png')?>" alt="">
 				</div>
 			</div>
 		</div>

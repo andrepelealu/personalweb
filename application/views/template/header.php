@@ -4,11 +4,12 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.min.css")?>">
+		<link rel="stylesheet" href="<?php echo base_url("assets/js/jquery.js")?>">
+		<link rel="stylesheet" href="<?php echo base_url("assets/js/bootstrap.min.js")?>">
 
-		<link rel="stylesheet" href="<?php echo base_url()?>assets/style.css">
+		<link rel="stylesheet" href="<?php echo base_url("assets/css/style.css")?>">
+		<link rel="stylesheet" href="<?php echo base_url("assets/css/scrolling-nav.css")?>">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins|Ubuntu" rel="stylesheet">
@@ -17,3 +18,25 @@
     <!-- END FONT -->
 		<title>Andre Aditya Pelealu</title>
 	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+	<div class="container">
+		<a class="navbar-brand js-scroll-trigger logo" href="<?php echo base_url()?>">AndrePelealu</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#about">Tentang Saya</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#services">Pengalaman Organisasi</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#contact" data-toggle="modal" data-target="#myModal">Kontak</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
