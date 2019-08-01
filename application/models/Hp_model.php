@@ -3,10 +3,10 @@
 
 class Hp_model EXTENDS CI_Model
 {
-  
-   function ambil(){
 
-     return $this->db->get('homepage');
+   function ambil_header(){
+      $query = $this->db->get('homepage');
+     return $query->row();
   }
   public function simpan_komen($data){
 
