@@ -27,18 +27,49 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#profile">Tentang Saya</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#organisasi">Pengalaman Organisasi</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#contact" data-toggle="modal" data-target="#myModal">Kontak</a>
-				</li>
+				<?php 		if(!$this->UserModel->is_login())
+						{
+							echo '				<li class="nav-item">
+												<a class="nav-link js-scroll-trigger" href="#profile">Tentang Saya</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link js-scroll-trigger" href="#organisasi">Pengalaman Organisasi</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link js-scroll-trigger" href="#contact" data-toggle="modal" data-target="#myModal">Kontak</a>
+											</li>';
+						}?>
+
 				<li class="nav-item">
 					<a class="nav-link js-scroll-trigger" href="<?php echo base_url('blog') ?>" >Blog</a>
 				</li>
+				<?php 		if($this->UserModel->is_login())
+						{
+							echo '<li class="nav-item">
+								<a class="nav-link js-scroll-trigger" href="'.base_url('blog/createpost').'" >Buat Post</a>
+								</li>';
+						}?>
+
+				<?php 		if(!$this->UserModel->is_login())
+						{
+							echo '<li class="nav-item">
+								<a class="nav-link js-scroll-trigger" href="'.base_url('login').'" >Login</a>
+								</li>';
+						}?>
+
+
+						<?php 		if($this->UserModel->is_login())
+										{
+								echo '	<li class="nav-item">
+										<a class="nav-link js-scroll-trigger" href="'. base_url('edit').'" >Edit Web</a>
+									</li>'			;
+								}?>
+								<?php 		if($this->UserModel->is_login())
+												{
+										echo '	<li class="nav-item">
+												<a class="nav-link js-scroll-trigger" href="'. base_url('logout').'" >Logout</a>
+											</li>'			;
+										}?>
 			</ul>
 		</div>
 	</div>

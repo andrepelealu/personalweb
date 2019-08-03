@@ -115,6 +115,7 @@
 			<div class="row">
 				<div class="col-md-6 col-xs-12">
 					<div class="jumbotron">
+					    <h3><?php echo $header->title_sec2 ?></h3>
 						<p><i>"<?php echo $header->content_quotes ?>"</i></p>
 					</div>
 				</div>
@@ -131,13 +132,8 @@
 		<section id="organisasi">
 			<div class="col-md-12 col-xs-12" >
 				<div class="center">
-					<h4>Pengalaman Organisasi</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-						 ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-						 voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-						 cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<h4><?php echo $header->title_sec3 ?></h4>
+					<p><?php echo $header->content_sec3 ?></p>
 				</div>
 			</div>
 			<div class="row">
@@ -160,15 +156,3 @@
 		</section>
 
 	</div>
-
-	<script type="text/javascript">
-	var kata = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."; //Kata yang akan muncul
-	var inkata = 0; // Index kata
-	var kecepatanKataMuncul = 80; //Kecepatan huruf yang akan kita munculkan
-
-	setInterval(function(){
-		var target = $("#target"); //Inisialisasi div id target
-		target.append(kata[inkata]); //Memasukkan kata satu persatu ke html
-		inkata++; //index kata selalu bertambah
-	}, kecepatanKataMuncul); //Timing 200 ms perhuruf yang d
-</script>

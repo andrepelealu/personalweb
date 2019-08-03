@@ -5,5 +5,10 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['pesan']='welcome/send';
 
-$route['tampil/(:any)']='blog/tampil/$1';
+$route['tampil/(:any)/(:any)']='blog/tampil/$1/$2';
+$route['update/(:any)/(:any)']='blog/update/$1/$2';
+$route['delete/(:any)/(:any)']='blog/update/$1/$2';
+$route['register']            ='UserAuth/register';
+$route['login']               ='UserAuth/login';
+$route['logout']            ='UserAuth/logout';
 $route['notfound']='page404';

@@ -5,6 +5,7 @@ class Welcome extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('hp_model');
+		$this->load->model('UserModel');
 	}
 	public function index()
 	{
@@ -41,6 +42,7 @@ class Welcome extends CI_Controller {
 		    echo "<script type='text/javascript'>alert('Pesan Berhasil Dikirim');</script>";
 				if($kirim)
 				{
+				    echo '<script>alert("Pesan berhasil di kirim !");</script>';
 					redirect(base_url());
 				}
 

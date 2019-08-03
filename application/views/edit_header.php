@@ -29,6 +29,8 @@
 
     <label for="">Introduction Content</label>
     <textarea class="form-control rounded-0"  rows="10" name="content_perkenalan" value=""><?php echo $content->content_perkenalan ?></textarea>
+    <label for="">Title Section 2</label><br>
+    <input type="text" name="title_sec2" value="<?php echo $content->title_sec2 ?>"><br>
     <label for="">Quotes</label>
     <textarea class="form-control rounded-0"  rows="10" name="content_quotes" value=""><?php echo $content->content_quotes ?></textarea>
     <h3>Section 3</h3>

@@ -6,7 +6,9 @@ class Blog extends CI_Controller {
 		parent::__construct();
 		$this->load->model('blog_m');
 		$this->load->model('hp_model');
+		$this->load->model('UserModel');
 	}
+
 	public function index()
 	{
 		/*pagination START*/
@@ -14,7 +16,7 @@ class Blog extends CI_Controller {
 		$this->load->library('pagination');
 		$config['base_url'] = base_url().'blog/index/';
 		$config['total_rows'] = $jml_data;
-		$config['per_page'] = 10;
+		$config['per_page'] = 5;
 		$from =$this->uri->segment(3);
 		$this->pagination->initialize($config);
 		$data['jml'] = $this->blog_m->data($config['per_page'],$from,'blog');
@@ -26,6 +28,10 @@ class Blog extends CI_Controller {
 	}
 	public function createpost()
 	{
+		if(!$this->UserModel->is_login())
+		{
+			redirect('login');
+		}
 		if(isset($_POST['submit']))
 		{
 			$judul		= $this->input->post('judul');
@@ -41,7 +47,7 @@ class Blog extends CI_Controller {
 			$simpan		= $this->hp_model->simpan('blog',$post);
 			if ($simpan) {
 				echo "<script type='text/javascript'>alert('Berhasil');</script>";
-				redirect('/blog/createpost');
+				redirect('/blog');
 			}else{
 				echo "<script type='text/javascript'>alert('Gagal');</script>";
 				redirect('/blog/createpost');
@@ -54,9 +60,41 @@ class Blog extends CI_Controller {
 		}
 
 	}
-	public function tampil($slug)
+	public function update($id,$lug){
+		if(!$this->UserModel->is_login())
+		{
+			redirect('login');
+		}
+		$data['post'] = $this->blog_m->get_single_post("blog",$id);
+		$this->load->view('template/header_blog');
+		$this->load->view('update',$data);
+		$this->load->view('template/footer_blog');
+		if (isset($_POST['update'])) {
+			$judul = $this->input->post('judul');
+			$isi	 = $this->input->post('post');
+			$data = array(
+				'judul' => $judul,
+				'post'	=> $isi
+			);
+			if($this->blog_m->update_blog($id,$data)){
+				echo '<script>alert("berhasil di update")</script>';
+				header("Refresh:0");
+			}
+		}
+	}
+	public function delete($id,$lug){
+		if(!$this->UserModel->is_login())
+		{
+			redirect('login');
+		}
+			if($this->blog_m->delete_blog($id)){
+				echo '<script>alert("berhasil di hapus")</script>';
+				redirect('blog');
+	}
+}
+	public function tampil($id,$slug)
 	{
-		$data['post'] = $this->blog_m->get_single_post("blog",$slug);
+		$data['post'] = $this->blog_m->get_single_post("blog",$id);
 		$this->load->view('template/header_blog');
 		$this->load->view('singlepage',$data);
 		$this->load->view('template/footer_blog');

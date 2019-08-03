@@ -1,4 +1,11 @@
+<header class="bg">
+  <div class="container">
+    <h2>Posting di Blog</h2>
+  </div>
+</header>
 
+<div class="container">
+    <h3>Buat Post</h3>
 <form class="" action="createpost" method="post">
   <label for="">judul</label>
   <input type="text" name="judul" value="">
@@ -10,3 +17,4 @@
   <input type="submit" class="btn btn-primary" name="submit" value="Post">
 </form>
 <a class="btn btn-warning" href="<?php echo base_url('blog') ?>">Kembali ke Blog</a>
+</div>

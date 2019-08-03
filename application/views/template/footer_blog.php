@@ -24,3 +24,12 @@
 
 	</body>
 </html>
+<!-- Bootstrap core JavaScript -->
+<script src="<?php echo base_url("assets/js/jquery.js") ?>"></script>
+<script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js") ?>"></script>
+
+<!-- Plugin JavaScript -->
+<script src="<?php echo base_url("assets/js/jquery.easing.min.js") ?>"></script>
+
+<!-- Custom JavaScript for this theme -->
+<script src="<?php echo base_url("assets/js/scrolling-nav.js") ?>"></script>
