@@ -24,19 +24,45 @@ class UserAuth extends CI_Controller {
           $email  = $this->input->post('email');
           $this->load->helper('string');
           $pass  = password_hash($this->input->post('password1'),PASSWORD_DEFAULT);
-          $_SESSION['token'] = random_string('alnum',16);
+          $token = $_SESSION['token'] = random_string('alnum',16);
           $data = array(
             'username' => $uname,
             'email'    => $email,
             'password' => $pass,
-            'token'    => $_SESSION['token']
+            'token'    => $token
           );
           if($this->UserModel->register($data))
           {
-            die('bisa');
+            // echo 'bisa';
+            $this->load->library('email');
+            $this->email->from('register@andrepelealu.com','Andre Aditya');
+            $this->email->to('andre02.9d@gmail.com');
+            $this->email->subject('AndrePelealu.com | New User Register');
+            $this->email->message("Silahkan Verifikasi user $uname <br>
+            <a href='http://localhost/andre/verify/$uname/$token'>Klik</a>
+            ");
+            $this->email->set_mailtype('html');
+            if ($this->email->send()) {
+              echo 'bisa';
+            }else{
+              echo 'gabisa';
+            }
           }
         }
       }
+  }
+  public function verify($uname,$token)
+  {
+    $data=$this->UserModel->get_user('username',$uname);
+    $tokenDB = $data->token;
+    $unameDB = $data->username;
+    if($tokenDB==$token){
+      if($this->UserModel->UpdateRole($unameDB)){
+        echo 'bisa';
+      }
+    }
+
+
   }
   public function login()
   {

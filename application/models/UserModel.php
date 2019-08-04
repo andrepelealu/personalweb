@@ -27,5 +27,20 @@ class UserModel EXTENDS CI_Model
       return false;
     }
   }
+  public function get_user($key,$uname){
+    $query = $this->db->get_where('users',array($key=>$uname));
+    return $query->row();
+  }
+  public function UpdateRole($uname){
+    $this->db->set('role','1');
+    $this->db->where('username',$uname);
+    $query = $this->db->update('users');
+    if($query)
+    {
+      return TRUE;
+    }else{
+      return FALSE;
+    }
+  }
 }
 ?>
