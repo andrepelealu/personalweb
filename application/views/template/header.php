@@ -27,6 +27,9 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
+			    				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>" >Home</a>
+				</li>
 				<?php 		if(!$this->UserModel->is_login())
 						{
 							echo '				<li class="nav-item">

@@ -116,7 +116,7 @@
 				<div class="col-md-6 col-xs-12">
 					<div class="jumbotron">
 					    <h3><?php echo $header->title_sec2 ?></h3>
-						<p><i>"<?php echo $header->content_quotes ?>"</i></p>
+						<p><?php echo $header->content_quotes ?></p>
 					</div>
 				</div>
 				<div class="col-md-6 col-xs-12">
@@ -129,8 +129,8 @@
 		</section>
 
 		<!-- Gallery -->
-		<section id="organisasi">
-			<div class="col-md-12 col-xs-12" >
+		   <section id="organisasi">
+			<div class="col-md-12 col-xs-12" id="">
 				<div class="center">
 					<h4><?php echo $header->title_sec3 ?></h4>
 					<p><?php echo $header->content_sec3 ?></p>
@@ -152,7 +152,7 @@
 
 				</div>
 			</div>
+			</section>
 			<!-- END Gallery -->
-		</section>
-
+		
 	</div>

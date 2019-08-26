@@ -39,13 +39,13 @@ class UserAuth extends CI_Controller {
             $this->email->to('andre02.9d@gmail.com');
             $this->email->subject('AndrePelealu.com | New User Register');
             $this->email->message("Silahkan Verifikasi user $uname <br>
-            <a href='http://localhost/andre/verify/$uname/$token'>Klik</a>
+            <a href='http://andrepelealu.com/verify/$uname/$token'>Klik</a>
             ");
             $this->email->set_mailtype('html');
             if ($this->email->send()) {
-              echo 'bisa';
+              redirect(base_url());
             }else{
-              echo 'gabisa';
+              redirect(base_url());
             }
           }
         }
@@ -81,16 +81,21 @@ class UserAuth extends CI_Controller {
       $passdb = $data->password;
 
       if(password_verify($pass,$passdb)){
-        if($this->UserModel->is_login()){
-          redirect();
-        }else{
-          // session_start();
+        $cekrole = $this->UserModel->get_user('username',$this->input->post('username'));
+        $cekrole = $cekrole->role;
+        if($cekrole==1){
           $_SESSION['login'] = TRUE;
+          redirect();
+          // echo $cekrole;
+        }else{
+        //   echo 'akun anda belum disetujui oleh Andre';
+          // session_start();
+          // $_SESSION['login'] = TRUE;
           redirect(base_url());
         }
 
       }else{
-        echo 'gabisa';
+        echo 'pass salah';
       }
     }
   }

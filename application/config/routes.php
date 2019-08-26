@@ -13,3 +13,5 @@ $route['login']               ='UserAuth/login';
 $route['logout']            ='UserAuth/logout';
 $route['notfound']='page404';
 $route['verify/(:any)/(:any)']='UserAuth/verify/$1/$2';
+$route['binaracademy']            ='Binar/index';
+
