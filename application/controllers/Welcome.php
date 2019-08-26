@@ -39,16 +39,15 @@ class Welcome extends CI_Controller {
 		    $message = "Nama Pengirim :".$nama."| Pesan: ".$pesan;
 		    $headers = "From:" . $from;
 		    $kirim = mail($to,$subject,$message, $headers);
-		    echo "<script type='text/javascript'>alert('Pesan Berhasil Dikirim');</script>";
-				if($kirim)
+		    // echo "<script type='text/javascript'>alert('Pesan Berhasil Dikirim');</script>";
+				if($simpan)
 				{
-				    echo '<script>alert("Pesan berhasil di kirim !");</script>';
-					redirect(base_url());
+				   echo '<script>alert("Pesan Terkirim !");</script>';
 				}
-
+				echo '<script>window.location.href = "'.base_url().'";</script>';
 			}else{
-				echo "<script type='text/javascript'>alert('Gagal');</script>";
-				redirect('/');
+				// echo "<script type='text/javascript'>alert('Gagal');</script>";
+				// redirect('/');
 			}
 		}else{
 			redirect('/');

@@ -36,6 +36,11 @@
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links
+  function sukses(){
+    alert('Pesan Terkirim !');
+    window.location.href = "http://www.w3schools.com";
+
+  }
   $("a").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior

@@ -67,7 +67,7 @@
 										<input type="text" class="form-control" name="nama" value="" required>
 										<label for="comment" style="color:black">Pesan:</label>
 										<textarea name="isi" class="form-control" rows="5" id="comment" required></textarea>
-										<center><button type="submit" class="btn btn-warning"name="button" data-toggle="modal" data-target="#exampleModal">Send Message</button></center>
+										<center><button type="submit" class="btn btn-warning"name="button" data-toggle="modal" data-target="#exampleModal" onclick="sukses();">Send Message</button></center>
 									</div>
 								</form>
 
@@ -154,5 +154,5 @@
 			</div>
 			</section>
 			<!-- END Gallery -->
-		
+
 	</div>
