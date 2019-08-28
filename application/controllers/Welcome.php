@@ -22,6 +22,7 @@ class Welcome extends CI_Controller {
 		{
 			$nama = $this->input->post('nama');
 			$pesan = $this->input->post('isi');
+			$pengirim = $this->input->post('pengirim');
 			// $nama = $this->db->escape($nama);
 			// $pesan = $this->db->escape($pesan);
 			$data = array(
@@ -36,21 +37,20 @@ class Welcome extends CI_Controller {
 		    $from = "kontak-andrepelealu@andrepelealu.com";
 		    $to = "andre02.9d@gmail.com";
 		    $subject = "[AndrePelealu.com]Ada Pesan baru dari website";
-		    $message = "Nama Pengirim :".$nama."| Pesan: ".$pesan;
+		    $message = "Nama Pengirim :".$nama."| Pesan: ".$pesan."| Kontak Pengirim: ".$pengirim;
 		    $headers = "From:" . $from;
 		    $kirim = mail($to,$subject,$message, $headers);
 		    // echo "<script type='text/javascript'>alert('Pesan Berhasil Dikirim');</script>";
-				if($simpan)
+				if($kirim)
 				{
 				   echo '<script>alert("Pesan Terkirim !");</script>';
 				}
 				echo '<script>window.location.href = "'.base_url().'";</script>';
 			}else{
-				// echo "<script type='text/javascript'>alert('Gagal');</script>";
-				// redirect('/');
+				redirect(base_url());
 			}
 		}else{
-			redirect('/');
+			redirect(base_url());
 		}
 
 	}

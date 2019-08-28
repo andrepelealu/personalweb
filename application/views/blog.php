@@ -11,7 +11,8 @@
       <?php foreach ($post as $p) {?>
       <div class="col-md-4">
         <div class="post">
-          <h3 class="title"><?php echo $p['judul']; ?></h3>
+          <a href="<?php echo base_url('tampil/'.$p['id'].'/'.$p['slug']); ?>">
+          <h3 class="title"><?php echo $p['judul']; ?></h3></a>
           <p><?php echo substr($p['post'], 0, 255); ?></p>
           <p><a href="<?php echo base_url('tampil/'.$p['id'].'/'.$p['slug']); ?>">Read More</a></p>
         </div>

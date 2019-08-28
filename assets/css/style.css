@@ -25,12 +25,12 @@ a:focus {
 img {
  max-width:100%
 }
-p {
+/* p {
  font-size:16px;
  line-height:30px;
  color:#898b96;
  font-weight:300
-}
+} */
 h4 {
  font-family:Rubik,sans-serif;
  margin:0;
@@ -196,8 +196,8 @@ p{
 .post{
   text-align: center;
   border: ridge;
-  padding: 5px;
-  margin: 10px;
+  padding: auto;
+  margin: 20%;
   background-color: ;
 
 }

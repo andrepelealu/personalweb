@@ -3,6 +3,7 @@
     <div class="container-fluid">
 
   <div class="post">
+
     <h3 class="title"><?php echo $post['judul']; ?></h3>
     <p><?php echo $post['post']; ?></p>
     <?php 		if($this->UserModel->is_login())
