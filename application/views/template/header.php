@@ -7,73 +7,72 @@
 		<link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.min.css")?>">
 		<link rel="stylesheet" href="<?php echo base_url("assets/js/jquery.js")?>">
 		<link rel="stylesheet" href="<?php echo base_url("assets/js/bootstrap.min.js")?>">
+		<link rel="stylesheet" href="<?php echo base_url("assets/css/scrolling-nav.css")?>">
 
 		<link rel="stylesheet" href="<?php echo base_url("assets/css/style.css")?>">
-		<link rel="stylesheet" href="<?php echo base_url("assets/css/scrolling-nav.css")?>">
+		<link rel="stylesheet" href="<?php echo base_url("assets/css/navbar.css")?>">
+
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins|Ubuntu" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+		<link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'>
 
     <!-- END FONT -->
 		<title>Andre Aditya Pelealu</title>
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top col-md-12 col-xs-12" id="mainNav">
+		<nav>
+			<div class="header">
 	<div class="container">
-		<a class="navbar-brand js-scroll-trigger logo" href="<?php echo base_url()?>">AndrePelealu</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
-			    				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>" >Home</a>
-				</li>
+
+
+
+		<a class="logo" href="<?php echo base_url()?>">AndrePelealu</a>
+		<!-- Navbar -->
+		<input type="checkbox" id="cek">
+		<label for="cek" class="show-menu">
+			<i class="fas fa-bars"></i>
+		</label>
+		<!-- navbar -->
+
+
+			<ul class="menu">
+
+					<a href="<?php echo base_url() ?>" >Home</a>
+
 				<?php 		if(!$this->UserModel->is_login())
 						{
-							echo '				<li class="nav-item">
-												<a class="nav-link js-scroll-trigger" href="#profile">Tentang Saya</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link js-scroll-trigger" href="#organisasi">Pengalaman Organisasi</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link js-scroll-trigger" href="#contact" data-toggle="modal" data-target="#myModal">Kontak</a>
-											</li>';
+							echo '
+												<a href="#profile">Tentang Saya</a>
+
+
+												<a href="#">Portofolio</a>
+
+
+												<a href="#contact" data-toggle="modal" data-target="#myModal">Kontak</a>
+												<a href="'.base_url('blog').'" >Blog</a>
+												<a href="'.base_url('login').'" >Login</a>
+											';
 						}?>
 
-				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="<?php echo base_url('blog') ?>" >Blog</a>
-				</li>
+
+
+
 				<?php 		if($this->UserModel->is_login())
 						{
-							echo '<li class="nav-item">
-								<a class="nav-link js-scroll-trigger" href="'.base_url('blog/createpost').'" >Buat Post</a>
-								</li>';
+							echo '
+								<a href="'.base_url('blog/createpost').'" >Buat Post</a>
+								<a href="'. base_url('edit').'" >Edit Web</a>
+								<a href="'. base_url('logout').'" >Logout</a>
+								';
 						}?>
 
-				<?php 		if(!$this->UserModel->is_login())
-						{
-							echo '<li class="nav-item">
-								<a class="nav-link js-scroll-trigger" href="'.base_url('login').'" >Login</a>
-								</li>';
-						}?>
-
-
-						<?php 		if($this->UserModel->is_login())
-										{
-								echo '	<li class="nav-item">
-										<a class="nav-link js-scroll-trigger" href="'. base_url('edit').'" >Edit Web</a>
-									</li>'			;
-								}?>
-								<?php 		if($this->UserModel->is_login())
-												{
-										echo '	<li class="nav-item">
-												<a class="nav-link js-scroll-trigger" href="'. base_url('logout').'" >Logout</a>
-											</li>'			;
-										}?>
+						<label for="cek" class="hide-menu">
+				      <i class="fas fa-times"></i>
+				    </label>
 			</ul>
+
 		</div>
-	</div>
+</div>
 	</nav>

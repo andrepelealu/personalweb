@@ -2,6 +2,8 @@
   <div class="container">
     <h2>Posting di Blog</h2>
   </div>
+     <script src="https://cdn.tiny.cloud/1/i4dh9lnxd250xmmwiq4fh9gv9y8dxjazhc90h5q773k5zu4v/tinymce/5/tinymce.min.js"></script>
+    <script>tinymce.init({selector:'textarea'});</script>
 </header>
 
 <div class="container">

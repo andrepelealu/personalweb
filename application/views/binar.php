@@ -18,9 +18,9 @@
 
 <div class="row">
   <div class="col-sm-6 xs-6 hide" ><img id="col1"><img src="<?php echo base_url('assets/img/profile.png')?>"></div>
-  <div class="col-sm-6  " id="col2"><h4 id="title2"></h4><span id="text"><span>
-    
-  </div>
+  <div class="col-sm-6  " id="col2"><h4 id="title2"></h4><span id="text"><span></div>
+
+</div>
 </div>
 
 </body>

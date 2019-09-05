@@ -5,7 +5,6 @@
 			<div class="container">
 				<div class="col-md-12 col-xs-12">
 					<center>
-						<!-- HEADER -->
 						<h1 class=""><?php echo $header->title_header ?></h1>
 						<h3 class="putih">
 							<?php echo $header->subtitle_header ?>
@@ -13,7 +12,6 @@
 						</h3>
 						<p class="putih" id=""><?php echo $header->desc_header ?></p>
 						<br>
-						<!-- END HEADER -->
 					</center>
 				</div>
 			</div>
@@ -24,7 +22,7 @@
 		<div class="row">
 
 			<div class="col-md-4">
-				<a href="#profile" class="btn btn-info btn-lg btn-block">Cek Profil Saya</a>
+				<a href="#profile" class="btn btn-info btn-lg btn-block">Tentang Saya</a>
 			</div>
 
 			<div class="col-md-4">
@@ -46,9 +44,8 @@
 			</div>
 			<div class="col-md-6">
 				<br><br><br><br>
-				<!-- Quotes header -->
+
 				<i><p class="putih">"<?php echo $header->teks_header ?>"</p></i>
-				<!-- Quotes header END -->
 			</div>
 		</div>
 		<!-- Modal content-->
@@ -72,7 +69,7 @@
 										<input type="text" class="form-control" name="pengirim" value="" required>
 										<label for="comment" style="color:black">Pesan:</label>
 										<textarea name="isi" class="form-control" rows="5" id="comment" required></textarea>
-										<center><button type="submit" class="btn btn-warning"name="button" data-toggle="modal" data-target="#exampleModal" onclick="sukses();">Send Message</button></center>
+										<center><button type="submit" class="btn btn-warning"name="button" data-toggle="modal" data-target="#exampleModal">Send Message</button></center>
 									</div>
 								</form>
 
@@ -89,14 +86,14 @@
 			</div>
 		</div>
 		<!-- MODAL END -->
-
+		<!-- MODAL CONFIRM -->
 
 	</div>
 </header>
 
 
 	<!-- The Modal -->
-	<!-- PERKENALAN -->
+	<!-- Perkenalan -->
 	<div class="container">
 		<section id="profile">
 			<div class="row">
@@ -114,25 +111,23 @@
 						<p>	<?php echo $header->content_perkenalan ?></p>
 					</div>
 				</div>
-				<!-- END PERKENALAN -->
+				<!-- END Perkenalan -->
 				<!-- Quotes -->
 			</div>
-			<!-- KEAHLIAN -->
 			<div class="row">
 				<div class="col-md-6 col-xs-12">
-					<div class="jumbotron ">
+					<div class="jumbotron">
 					    <h3><?php echo $header->title_sec2 ?></h3>
 						<p><?php echo $header->content_quotes ?></p>
 					</div>
 				</div>
-				<!-- KEAHLIAN END -->
 				<div class="col-md-6 col-xs-12">
 					<div class="center">
 						<img src="<?php echo base_url('assets/img/pict2.png')?>" alt="">
 					</div>
 				</div>
 			</div>
-
+			<!-- END Quotes -->
 		</section>
 
 		<!-- Gallery -->

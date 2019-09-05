@@ -22,9 +22,9 @@ class Blog extends CI_Controller {
 		$data['jml'] = $this->blog_m->data($config['per_page'],$from,'blog');
 		/*pagination END*/
 		$data['post'] = $this->blog_m->get_post("blog");
-		$this->load->view('template/header_blog');
+		$this->load->view('template/header');
 		$this->load->view('blog',$data);
-		$this->load->view('template/footer_blog');
+		$this->load->view('template/footer');
 	}
 	public function createpost()
 	{
@@ -37,7 +37,6 @@ class Blog extends CI_Controller {
 			$judul		= $this->input->post('judul');
 			$post 		= $this->input->post('isi');
 			$slug			= str_replace(" ", "-",$judul);
-			$slug			= str_replace("#", "",$judul);
 
 			$post 		= array(
 				'judul' => $judul,
@@ -54,9 +53,9 @@ class Blog extends CI_Controller {
 			}
 
 		}else{
-			$this->load->view('template/header_blog');
+			$this->load->view('template/header');
 			$this->load->view('post');
-			$this->load->view('template/footer_blog');
+			$this->load->view('template/footer');
 		}
 
 	}
@@ -66,9 +65,9 @@ class Blog extends CI_Controller {
 			redirect('login');
 		}
 		$data['post'] = $this->blog_m->get_single_post("blog",$id);
-		$this->load->view('template/header_blog');
+		$this->load->view('template/header');
 		$this->load->view('update',$data);
-		$this->load->view('template/footer_blog');
+		$this->load->view('template/footer');
 		if (isset($_POST['update'])) {
 			$judul = $this->input->post('judul');
 			$isi	 = $this->input->post('post');
@@ -95,8 +94,8 @@ class Blog extends CI_Controller {
 	public function tampil($id,$slug)
 	{
 		$data['post'] = $this->blog_m->get_single_post("blog",$id);
-		$this->load->view('template/header_blog');
+		$this->load->view('template/header');
 		$this->load->view('singlepage',$data);
-		$this->load->view('template/footer_blog');
+		$this->load->view('template/footer');
 	}
 }

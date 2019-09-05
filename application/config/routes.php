@@ -11,7 +11,6 @@ $route['delete/(:any)/(:any)']='blog/update/$1/$2';
 $route['register']            ='UserAuth/register';
 $route['login']               ='UserAuth/login';
 $route['logout']            ='UserAuth/logout';
-$route['notfound']='page404';
+$route['notfound']='welcome';
 $route['verify/(:any)/(:any)']='UserAuth/verify/$1/$2';
 $route['binaracademy']            ='Binar/index';
-

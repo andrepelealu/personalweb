@@ -57,7 +57,7 @@ a {
  border-radius:50%;
  right:-webkit-calc((100% - 1140px)/ 2);
  right:calc((100% - 1140px)/ 2);
- z-index:111;
+ z-index:1;
  bottom:80px;
  text-align:center
 }
@@ -154,23 +154,27 @@ p{
 .bg{
   color: white;
   background-image: url("../img/bg.jpg");
-  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 
 
 }
 .logo{
   font-family: 'Permanent Marker', cursive;
-  margin-left: 5%;
-  padding: 5px;
+  /* margin-left: 5%;
+  padding: 5px; */
   color:white;
   font-size: 25px;
-  border-bottom: 2px solid;
+  line-height: 100px;
+  float: left;
 }
 .logo:hover{
-  margin-left: 5%;
-  font-size: 30px;
+  /* margin-left: 5%; */
+  font-size: 27px;
   color: white;
+  line-height: 100px;
+  float: left;
 }
 .efek-ketik
         {

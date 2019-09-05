@@ -8,7 +8,9 @@ class UserAuth extends CI_Controller {
   }
   public function register()
   {
-
+    if (!$this->UserModel->is_login()) {
+      redirect('login');
+    }else{
       $this->form_validation->set_rules('username', 'Username','required|is_unique[users.username]');
       $this->form_validation->set_rules('email', 'email','required|is_unique[users.email]');
       $this->form_validation->set_rules('password1', 'Password','required');
@@ -51,6 +53,7 @@ class UserAuth extends CI_Controller {
         }
       }
   }
+}
   public function verify($uname,$token)
   {
     $data=$this->UserModel->get_user('username',$uname);

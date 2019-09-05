@@ -1,8 +1,9 @@
 
-<section>
-    <div class="container-fluid">
 
-  <div class="post">
+<div class="services">
+<h1>Blog Post</h1>
+  <div class="cen">
+    <div class="service">
 
     <h3 class="title"><?php echo $post['judul']; ?></h3>
     <p><?php echo $post['post']; ?></p>
@@ -13,6 +14,5 @@
     		<?php } ?>
 
     <a href="<?php echo base_url('blog') ?>" class="btn btn-primary">Kembali ...</a>
-  </div>
-  </div>
-</section>
+</div>
+</div>
