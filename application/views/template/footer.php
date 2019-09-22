@@ -1,25 +1,16 @@
 
 
-    <footer class="footer-area footer--light">
-
-      <div class="mini-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="copyright-text">
-                <p>© 2018
-                  <a href="#">:)</a>. All rights reserved. Created by
-                  <a href="#">AndrePelealu &copy</a>
-                </p>
-
-              </div>
-
-
-            </div>
-          </div>
-        </div>
+<footer class="bg-dark text-white mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <p>Copyright &copy; 2018.</p>
       </div>
-    </footer>
+    </div>
+  </div>
+</footer>
+
+
 
 
 	</body>

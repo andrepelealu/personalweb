@@ -1,8 +1,6 @@
 
 
 <div class="container">
-
-
   <div class="services">
 <h1>Blog Post</h1>
     <div class="cen">
